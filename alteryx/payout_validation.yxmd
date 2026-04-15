@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>validated_participants.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="participant_id" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="name" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="lob" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="region" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="hire_date" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="employment_status" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="plan_type" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="quota_usd" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="sales_actual_usd" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="attainment_pct" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="eligibility_flag" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="payout_calculated_usd" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="payout_approved_usd" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="cycle_month" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="eligibility_pass" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="discrepancy_flag" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="missing_quota_flag" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+            <Field name="overall_status" size="254" source="File: C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\data\processed\validated_participants.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="174" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="quota_usd" selected="True" type="Double" size="8" />
+            <SelectField field="attainment_pct" selected="True" type="Double" size="8" />
+            <SelectField field="payout_calculated_usd" selected="True" type="Double" size="8" />
+            <SelectField field="payout_approved_usd" selected="True" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="270" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[[employment_status] = "Active" AND [attainment_pct] >= 0.70
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[[employment_status] = "Active" AND [attainment_pct] >= 0.70
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="402" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IIF(ABS([payout_calculated_usd] - [payout_approved_usd]) &gt; 50, &quot;Y&quot;, &quot;N&quot;)&#xA;" field="discrepancy_flag_alteryx" size="1073741823" type="V_WString" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>discrepancy_flag_alteryx = IIF(ABS([payout_calculated_usd] - [payout_approved_us...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="534" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\Hari\Desktop\Portf_Proj\sales-incentive-payout-validator\alteryx\alteryx_validated_output.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>alteryx_validated_output.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="True" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>payout_validation</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="1dcc3207-d42e-4bdd-afaa-93b6b5da2bbc" />
+      <Telemetry>
+        <PreviousWorkflowId value="987a6b62-48a9-4a6e-a793-4dd9953fc345" />
+        <OriginWorkflowId value="987a6b62-48a9-4a6e-a793-4dd9953fc345" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

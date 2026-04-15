@@ -1,0 +1,34 @@
+============================================================
+SALES INCENTIVE PAYOUT VALIDATION — AUDIT LOG
+Run timestamp : 2026-04-15 03:14:44
+Input file    : data/raw/participants.csv
+Total rows    : 500
+============================================================
+
+BUSINESS RULES APPLIED:
+  Rule 1 — Eligibility:
+    Condition : employment_status == 'Active' AND attainment_pct >= 0.70
+   Failures  : 197 rows (39.4%)
+
+  Rule 2 — Payout Discrepancy:
+    Condition : abs(payout_calculated - payout_approved) > $50
+   Flagged   : 40 rows (8.0%)
+
+  Rule 3 — Missing Quota:
+    Condition : quota_usd is null or 0
+   Flagged   : 35 rows (7.0%)
+
+============================================================
+SUMMARY:
+  Total flagged for Review : 228 (45.6%)
+  Total Clean              : 272 (54.4%)
+============================================================
+
+LOB BREAKDOWN (discrepancy count):
+  Commercial      : 3 discrepancies
+  Medicaid        : 10 discrepancies
+  Medicare        : 9 discrepancies
+  PBM             : 7 discrepancies
+  Specialty       : 11 discrepancies
+
+END OF LOG
