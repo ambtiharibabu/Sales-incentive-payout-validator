@@ -116,3 +116,20 @@ python src/validate.py
 python src/export_excel.py
 python src/audit_and_chart.py
 ```
+
+## Transferable to Contract Compliance Workflows
+
+The validation pipeline architecture in this project maps directly to contract 
+operations and compliance review workflows:
+
+- **Eligibility rule engine** → Contract compliance check (counterparty meets 
+  trading standards, credit terms, regulatory requirements)
+- **Discrepancy flagging** → Contract value or obligation mismatch detection 
+  (approved vs. executed terms)
+- **Audit trail export** → Audit-ready documentation aligned to trading standards 
+  and legal review cycles
+- **Alteryx workflow** → Low-code replication of validation logic, demonstrating 
+  the process automation approach called out in contract analyst roles
+
+Built with Python + Alteryx Designer — demonstrating both scripted and 
+low-code approaches to compliance validation pipelines.
